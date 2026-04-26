@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-B </title>
+    <link rel="stylesheet" href="body.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">A-B</div>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Produits</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Découvrez nos produits</h1>
+    <p>Qualité, simplicité, efficacité</p>
+</section>
+
+<section class="products">
+
+   <div class="card">
+    <img src="PN.1.jpg" alt="">
+    <div class="card-content">
+        <h2 class="product-name">Cigarette electrique</h2>
+        <p>Recharge rapide et fiable</p>
+        <span>Poids : 250g</span>
+        <button onclick="contactWhatsApp(this)">Contacter</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="PN.2.jpg" alt="">
+    <div class="card-content">
+        <h2 class="product-name"> PUFF S</h2>
+        <p>Non rechargeable</p>
+        <span>Autonomie : 10h</span>
+        <button onclick="contactWhatsApp(this)">Contacter</button>
+    </div>
+</div>
+
+</section>
+
+<footer>
+    <p>📞 06 70 63 07  | 📍 BF</p>
+</footer>
+<a href="https://wa.me/22606706307?text=Bonjour%20je%20souhaite%20des%20informations" 
+   class="whatsapp-float" target="_blank">
+    💬
+</a>
+
+<script>
+function contactWhatsApp(button) {
+    let product = button.parentElement.querySelector(".product-name").innerText;
+
+    let message = "Bonjour, je suis intéressé par : " + product;
+
+    let phone = "22606706307";
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+</script> 
+</body>
+</html>
